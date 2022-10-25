@@ -15,13 +15,12 @@ const images = [
 
 const galleryEl = document.querySelector('.gallery');
 const markup = images.map(({url, alt}) => `<li><img src="${url}" alt="${alt}" width="300"></li>`).join('');
-console.log(markup)
+
 galleryEl.insertAdjacentHTML('afterbegin', markup);
 
 galleryEl.style.display = 'flex';
-galleryEl.style.flexDirection = 'row';
 galleryEl.style.justifyContent = 'space-around';
 galleryEl.style.padding = '20px';
-// galleryEl.listStyle = 'none';   <--- Не спрацьовує 
+// galleryEl.listStyle = 'none';   <--- Не спрацьовує (додано через css)
 
 
