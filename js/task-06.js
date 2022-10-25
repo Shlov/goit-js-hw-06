@@ -1,6 +1,6 @@
 const inputEl = document.querySelector('#validation-input');
 
-inputEl.addEventListener('blur', colorChange)
+inputEl.addEventListener('blur', colorChange);
 
 const colorReset = () => inputEl.classList.remove('valid', 'invalid');
 
@@ -9,8 +9,8 @@ function colorChange() {
     if (inputEl.value.length > inputEl.getAttribute('data-length')) {
         return inputEl.classList.add('valid');
     } else if (!inputEl.value.length) {
-        colorReset()
+        colorReset();
         return
     }
-    inputEl.classList.add('invalid')
+    inputEl.classList.add('invalid');
 }

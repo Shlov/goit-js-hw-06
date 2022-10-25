@@ -5,7 +5,7 @@ nptNameEl.addEventListener('input', updatesBtn);
 
 function updatesBtn() {
     if (nptNameEl.value.length) {
-        return btnNameEl.textContent = nptNameEl.value
+        return btnNameEl.textContent = nptNameEl.value;
     }
     btnNameEl.textContent = 'Anonymous'
 }

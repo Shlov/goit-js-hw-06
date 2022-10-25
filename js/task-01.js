@@ -6,13 +6,13 @@ const outputInfo = () => {
     
     for (const category of document.querySelectorAll('.item')) {
         // var 1
-        console.log(`Category: ${category.firstElementChild.textContent}`)
+        console.log(`Category: ${category.firstElementChild.textContent}`);
         // var 2
-        // console.log(`Category: ${category.querySelector('h2').textContent}`)
+        // console.log(`Category: ${category.querySelector('h2').textContent}`);
         // var 1
-        console.log(`Elements: ${category.querySelectorAll('li').length}`)
+        console.log(`Elements: ${category.querySelectorAll('li').length}`);
         // var 2
-        // console.log(`Elements: ${category.lastElementChild.children.length}`)
+        // console.log(`Elements: ${category.lastElementChild.children.length}`);
     }
 }
 

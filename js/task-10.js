@@ -19,13 +19,13 @@ function createBoxes() {
     boxEl.style.backgroundColor = getRandomHexColor();
     boxEl.style.width = `${widthBox + 10 * index}px`;
     boxEl.style.height = `${heightBox + 10 * index}px`;
-    boxes.push(boxEl)
+    boxes.push(boxEl);
   }
   boxesEl.append(...boxes); 
 }
 
 function destroyBoxes() {
-  const quantity = boxesEl.children.length
+  const quantity = boxesEl.children.length;
   for (let index = 1; index < quantity + 1; index += 1) {
     boxesEl.firstChild.remove();
   }
