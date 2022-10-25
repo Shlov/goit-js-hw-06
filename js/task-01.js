@@ -1,4 +1,4 @@
-const foo = () => {
+const outputInfo = () => {
     // var 1
     console.log(`Number of categories: ${document.querySelector('#categories').children.length}`);
     // var 2
@@ -16,4 +16,4 @@ const foo = () => {
     }
 }
 
-foo ()
+outputInfo ()
