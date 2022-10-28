@@ -33,7 +33,7 @@ function destroyBoxes() {
     boxesEl.firstChild.remove();
     widthBox = 30;
     heightBox = 30;
-    // inputEl.value = '';
+    inputEl.value = '';
   }
 }
 
