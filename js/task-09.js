@@ -10,5 +10,5 @@ btnEl.addEventListener('click', changeBgColor);
 
 function changeBgColor() {
   bgEl.style.backgroundColor = getRandomHexColor();
-  txtEl.textContent = getRandomHexColor();
+  txtEl.textContent = bgEl.getAttribute('style').replace('background-color: ', '');
 }

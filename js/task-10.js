@@ -9,27 +9,42 @@ const boxesEl = document.querySelector('#boxes');
 
 createBtn.addEventListener('click', createBoxes);
 destroyBtn.addEventListener('click', destroyBoxes);
+let widthBox = 30;
+let heightBox = 30;
 
 function createBoxes() {
   const boxes = []
   for (let index = 0; index < Number(inputEl.value); index+=1) {
-    const widthBox = 30;
-    const heightBox = 30;
     const boxEl = document.createElement('div');
     boxEl.style.backgroundColor = getRandomHexColor();
-    boxEl.style.width = `${widthBox + 10 * index}px`;
-    boxEl.style.height = `${heightBox + 10 * index}px`;
+    boxEl.style.width = `${widthBox}px`;
+    boxEl.style.height = `${heightBox}px`;
     boxes.push(boxEl);
+    widthBox += 10;
+    heightBox += 10;
   }
   boxesEl.append(...boxes); 
 }
 
+// var 1
 function destroyBoxes() {
   const quantity = boxesEl.children.length;
   for (let index = 1; index < quantity + 1; index += 1) {
     boxesEl.firstChild.remove();
+    widthBox = 30;
+    heightBox = 30;
+    // inputEl.value = '';
   }
 }
+
+// var 2
+// function destroyBoxes() {
+//   while (boxesEl.children.length) {
+//     boxesEl.firstChild.remove();
+//     widthBox = 30;
+//     heightBox = 30;
+//   }
+// }
 
 boxesEl.style.display = 'flex';
 boxesEl.style.justifyContent = 'flex-start';
